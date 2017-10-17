@@ -13,7 +13,7 @@ export default class Shape {
         this.p = p;
         this.length = length;
         const harmonicNumber = p.int(p.random(settings.numHarmonics)) + 1;
-        this.hue = p.map(harmonicNumber, 1, settings.numHarmonics, 0, 255);
+        this.hue = p.map(harmonicNumber, 1, settings.numHarmonics, 0, 320);
         this.pitchDeviation = (1 - settings.intonation) * settings.maxPitchDeviation;
         const harmonicFreq = fundamental * harmonicNumber *
             p.random(1 - this.pitchDeviation, 1 + this.pitchDeviation);
